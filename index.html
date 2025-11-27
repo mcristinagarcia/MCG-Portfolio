@@ -15,136 +15,55 @@
             color: #3E3E3E; /* Charcoal Gray Main Text */
         }
 
-        /* --- COLOR PALETTE (Soft Feminine Creative) --- */
-        /* Blush Pink (#F7DDE2) – Main Accent
-           Soft Lavender (#E6DAF6) – Secondary Accent
-           Pastel Peach (#FCE6D1) – Warm Balance Tone
-           Powder Blue (#DDECF8) – Cool Contrast
-           Cream White (#FFFDF8) – Base Background
-           Charcoal Gray (#3E3E3E) – Main Text
-           Warm Gray (#7A7A7A) – Subtext/Muted Text
-        */
-        
-        .text-accent { color: #3E3E3E; } /* Charcoal Gray - Used for strong headings */
-        .bg-accent { background-color: #F7DDE2; } /* Blush Pink - Buttons/Highlights */
-        .border-accent { border-color: #E6DAF6; } /* Soft Lavender - Borders */
-        
-        .text-dark-charcoal { color: #3E3E3E; } /* Charcoal Gray - Primary Headings */
-        .bg-dark-charcoal { background-color: #3E3E3E; } /* Charcoal Gray - Footer BG */
-        
-        .bg-page-light { background-color: #FFFDF8; } /* Cream White - Section Backgrounds */
-        
-        .text-rose-soft { color: #7A7A7A; } /* Warm Gray - Subtitles/Muted Text */
-        .bg-rose-soft { background-color: #FCE6D1; } /* Pastel Peach - Decorative Blobs */
-        
-        .text-muted-custom { color: #7A7A7A; } /* Warm Gray utility */
+        /* --- COLOR PALETTE --- */
+        .text-accent { color: #3E3E3E; }
+        .bg-accent { background-color: #F7DDE2; } /* Blush Pink */
+        .border-accent { border-color: #E6DAF6; } /* Soft Lavender */
+        .text-dark-charcoal { color: #3E3E3E; }
+        .bg-dark-charcoal { background-color: #3E3E3E; }
+        .bg-page-light { background-color: #FFFDF8; }
+        .text-rose-soft { color: #7A7A7A; }
+        .bg-rose-soft { background-color: #FCE6D1; }
 
         /* --- LAYOUT SPACING --- */
         section { padding-top: 3rem; padding-bottom: 3rem; }
         @media (min-width: 1024px) { section { padding-top: 5rem; padding-bottom: 5rem; } }
 
         /* --- 3D FLIPPING CARD CSS --- */
-        .flip-card-container {
-            perspective: 1000px;
-            height: 320px; 
-        }
+        .flip-card-container { perspective: 1000px; height: 320px; }
         .flip-card {
-            width: 100%;
-            height: 100%;
+            width: 100%; height: 100%;
             transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            transform-style: preserve-3d;
-            border-radius: 1rem;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            cursor: pointer;
+            transform-style: preserve-3d; border-radius: 1rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); cursor: pointer;
         }
-        .flip-card-container:hover .flip-card {
-            transform: rotateY(180deg);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-        }
+        .flip-card-container:hover .flip-card { transform: rotateY(180deg); box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); }
         .card-face {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            backface-visibility: hidden;
-            border-radius: 1rem;
-            padding: 2rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
+            position: absolute; width: 100%; height: 100%;
+            backface-visibility: hidden; border-radius: 1rem; padding: 2rem;
+            display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
         }
         .card-front { background-color: white; border: 1px solid #e5e7eb; }
-        .card-back {
-            transform: rotateY(180deg);
-            background-color: #3E3E3E; /* Charcoal Gray */
-            color: white;
-            justify-content: space-around;
-        }
+        .card-back { transform: rotateY(180deg); background-color: #3E3E3E; color: white; justify-content: space-around; }
 
-        /* --- 3D ROTATING HERO CAROUSEL (SIZE: 235x240) --- */
-        .hero-carousel-container {
-            perspective: 1200px;
-            width: 100%;
-            height: 400px; /* Adjusted height for smaller items */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: visible; 
-            margin-top: 20px;
-        }
-
-        .hero-spinner {
-            width: 235px;  /* Requested Width */
-            height: 240px; /* Requested Height */
-            transform-style: preserve-3d;
-            animation: spin 30s linear infinite;
-            position: relative;
-        }
-        .hero-spinner:hover {
-            animation-play-state: paused;
-        }
+        /* --- 3D HERO CAROUSEL --- */
+        .hero-carousel-container { perspective: 1200px; width: 100%; height: 400px; display: flex; justify-content: center; align-items: center; overflow: visible; margin-top: 20px; }
+        .hero-spinner { width: 235px; height: 240px; transform-style: preserve-3d; animation: spin 30s linear infinite; position: relative; }
+        .hero-spinner:hover { animation-play-state: paused; }
         .hero-item {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            left: 0;
-            top: 0;
-            border-radius: 1rem;
-            overflow: hidden;
-            border: 4px solid white;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-            background: white;
-            backface-visibility: hidden; 
+            position: absolute; width: 100%; height: 100%; left: 0; top: 0;
+            border-radius: 1rem; overflow: hidden; border: 4px solid white;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2); background: white; backface-visibility: hidden;
         }
-        .hero-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-
-        /* Geometry Calculation for 235px width:
-            Radius ~ Width / (2 * tan(36deg)) = 235 / 1.45 ≈ 162px.
-            We use 220px to add nice spacing gaps between cards.
-        */
+        .hero-item img { width: 100%; height: 100%; object-fit: cover; display: block; }
         .hero-item:nth-child(1) { transform: rotateY(0deg) translateZ(220px); }
         .hero-item:nth-child(2) { transform: rotateY(72deg) translateZ(220px); }
         .hero-item:nth-child(3) { transform: rotateY(144deg) translateZ(220px); }
         .hero-item:nth-child(4) { transform: rotateY(216deg) translateZ(220px); }
         .hero-item:nth-child(5) { transform: rotateY(288deg) translateZ(220px); }
-
-        @keyframes spin {
-            from { transform: rotateY(0deg); }
-            to { transform: rotateY(-360deg); }
-        }
-
-        /* Responsive adjustments for mobile */
+        @keyframes spin { from { transform: rotateY(0deg); } to { transform: rotateY(-360deg); } }
         @media (max-width: 640px) {
-            .hero-carousel-container {
-                height: 320px;
-            }
-            /* 235px fits well on mobile, just tightening the radius slightly */
+            .hero-carousel-container { height: 320px; }
             .hero-item:nth-child(1) { transform: rotateY(0deg) translateZ(170px); }
             .hero-item:nth-child(2) { transform: rotateY(72deg) translateZ(170px); }
             .hero-item:nth-child(3) { transform: rotateY(144deg) translateZ(170px); }
@@ -152,50 +71,20 @@
             .hero-item:nth-child(5) { transform: rotateY(288deg) translateZ(170px); }
         }
 
-
-        /* Scroll Reveal */
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease-out;
-        }
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Hover Effects */
+        /* --- UTILS --- */
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
         .portfolio-image { transition: transform 0.5s ease, filter 0.5s ease; }
         .group:hover .portfolio-image { transform: scale(1.05); filter: brightness(0.7); }
         .portfolio-overlay { opacity: 0; transition: opacity 0.4s ease; }
         .group:hover .portfolio-overlay { opacity: 1; }
-
-        /* Carousel */
-        .carousel-container {
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            scrollbar-width: none;
-            -ms-overflow-style: none;
-        }
+        .carousel-container { overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; -ms-overflow-style: none; }
         .carousel-container::-webkit-scrollbar { display: none; }
         .carousel-item { scroll-snap-align: center; }
-        
-        /* Typing Cursor */
-        .typing-cursor::after {
-            content: '|';
-            animation: blink 1s step-end infinite;
-        }
+        .typing-cursor::after { content: '|'; animation: blink 1s step-end infinite; }
         @keyframes blink { 50% { opacity: 0; } }
-
-        /* Contact Animations */
-        @keyframes popIn {
-            0% { opacity: 0; transform: scale(0.8) translateY(10px); }
-            100% { opacity: 1; transform: scale(1) translateY(0); }
-        }
-        .contact-anim {
-            animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-            opacity: 0; /* hidden initially */
-        }
+        @keyframes popIn { 0% { opacity: 0; transform: scale(0.8) translateY(10px); } 100% { opacity: 1; transform: scale(1) translateY(0); } }
+        .contact-anim { animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; opacity: 0; }
     </style>
 </head>
 <body>
@@ -242,7 +131,7 @@
                                     <span class="text-sm font-medium text-rose-soft group-hover:text-dark-charcoal">LinkedIn</span>
                                 </a>
 
-                                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mcristinagarcia.va@gmail.com" target="_blank" class="contact-anim flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-full shadow-sm hover:shadow-md hover:border-accent hover:-translate-y-1 transition-all duration-300 group" style="animation-delay: 200ms;">
+                                <a href="#contact-section" class="contact-anim flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-full shadow-sm hover:shadow-md hover:border-accent hover:-translate-y-1 transition-all duration-300 group" style="animation-delay: 200ms;">
                                      <svg class="w-5 h-5 text-gray-400 group-hover:text-red-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                                     <span class="text-sm font-medium text-rose-soft group-hover:text-dark-charcoal">Email Me</span>
                                 </a>
@@ -263,24 +152,13 @@
                     <div class="mt-12 lg:mt-0 lg:col-span-6 relative reveal">
                         <div class="hero-carousel-container">
                             <div class="hero-spinner">
-                                <div class="hero-item">
-                                    <img src="https://live.staticflickr.com/65535/54903963733_451be28eb5_z.jpg" alt="Social Media Content Sample">
-                                </div>
-                                <div class="hero-item">
-                                    <img src="https://live.staticflickr.com/65535/54904040265_14cb5ec588.jpg" alt="Nidra Social Media">
-                                </div>
-                                <div class="hero-item">
-                                    <img src="https://live.staticflickr.com/65535/54901201395_a052e1f973_z.jpg" alt="Logo Design">
-                                </div>
-                                <div class="hero-item">
-                                    <img src="https://live.staticflickr.com/65535/54927376185_2d5f15fa0b_z.jpg" alt="Flyer Design Sample">
-                                </div>
-                                <div class="hero-item">
-                                    <img src="https://live.staticflickr.com/65535/54948552086_c29ce86f67.jpg" alt="Black Friday Instagram Post">
-                                </div>
+                                <div class="hero-item"><img src="https://live.staticflickr.com/65535/54903963733_451be28eb5_z.jpg" alt="Social Media Content Sample"></div>
+                                <div class="hero-item"><img src="https://live.staticflickr.com/65535/54904040265_14cb5ec588.jpg" alt="Nidra Social Media"></div>
+                                <div class="hero-item"><img src="https://live.staticflickr.com/65535/54901201395_a052e1f973_z.jpg" alt="Logo Design"></div>
+                                <div class="hero-item"><img src="https://live.staticflickr.com/65535/54927376185_2d5f15fa0b_z.jpg" alt="Flyer Design Sample"></div>
+                                <div class="hero-item"><img src="https://live.staticflickr.com/65535/54948552086_c29ce86f67.jpg" alt="Black Friday Instagram Post"></div>
                             </div>
                         </div>
-                        
                         <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-rose-soft/30 blur-[80px] rounded-full -z-10 animate-pulse"></div>
                     </div>
                     
@@ -291,48 +169,27 @@
 
         <section id="about" class="bg-white !pt-4 !pb-8">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center lg:justify-between reveal">
-                
                 <div class="lg:w-1/3 mb-8 lg:mb-0 flex justify-center">
                     <div class="w-64 h-64 rounded-full bg-page-light border-8 border-accent shadow-2xl overflow-hidden transform hover:scale-105 transition duration-500 relative group">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition duration-300 z-10"></div>
-                        <img src="https://live.staticflickr.com/65535/54906289084_e80d706f17_z.jpg" 
-                            alt="Profile photo of Maria Cristina Garcia" 
-                            class="object-cover w-full h-full">
+                        <img src="https://live.staticflickr.com/65535/54906289084_e80d706f17_z.jpg" alt="Profile photo" class="object-cover w-full h-full">
                     </div>
                 </div>
-                
                 <div class="lg:w-2/3 lg:pl-16 text-center lg:text-left">
                     <h3 class="text-3xl sm:text-4xl font-extrabold text-dark-charcoal mb-6">Elevate Your Brand. Reclaim Your Time.</h3>
-                    <p class="text-lg text-rose-soft mb-4">
-                        Hello, I'm <b>Maria Cristina Garcia</b>. I believe that great design isn't just about looking good—it's about working smarter. 
-                    </p>
-                    <p class="text-lg text-rose-soft mb-8">
-                        As a Virtual Assistant with a passion for aesthetic and functional design, I handle the visual heavy-lifting so you can focus on growth. From <b>Instagram aesthetics</b> to <b>product packaging</b>, I bring your brand to life.
-                    </p>
-                    
+                    <p class="text-lg text-rose-soft mb-4">Hello, I'm <b>Maria Cristina Garcia</b>. I believe that great design isn't just about looking good—it's about working smarter.</p>
+                    <p class="text-lg text-rose-soft mb-8">As a Virtual Assistant with a passion for aesthetic and functional design, I handle the visual heavy-lifting so you can focus on growth.</p>
                     <div class="grid grid-cols-2 gap-4 sm:w-2/3 mx-auto lg:mx-0">
-                        <div class="flex items-center gap-2 text-dark-charcoal font-medium">
-                            <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            Reliable Support
-                        </div>
-                        <div class="flex items-center gap-2 text-dark-charcoal font-medium">
-                            <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            Creative Eye
-                        </div>
-                        <div class="flex items-center gap-2 text-dark-charcoal font-medium">
-                            <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            Detail Oriented
-                        </div>
-                        <div class="flex items-center gap-2 text-dark-charcoal font-medium">
-                            <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            Fast Turnaround
-                        </div>
+                        <div class="flex items-center gap-2 text-dark-charcoal font-medium"><svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Reliable Support</div>
+                        <div class="flex items-center gap-2 text-dark-charcoal font-medium"><svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Creative Eye</div>
+                        <div class="flex items-center gap-2 text-dark-charcoal font-medium"><svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Detail Oriented</div>
+                        <div class="flex items-center gap-2 text-dark-charcoal font-medium"><svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Fast Turnaround</div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="portfolio-page" class="bg-page-light !pt-8">
+        <section id="portfolio-page" class="bg-page-light !pt-8" style="padding-bottom: 1rem !important;">
              <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-8 reveal">
                     <h3 class="text-base text-rose-soft font-semibold tracking-wide uppercase">Services</h3>
@@ -344,67 +201,56 @@
                     <div class="flip-card-container reveal">
                         <div class="flip-card">
                             <div class="card-face card-front">
-                                <div class="flex items-center justify-center w-16 h-16 rounded-full bg-rose-soft/10 text-rose-soft mb-4">
-                                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.684 13.342C8.882 13.2 9 12.87 9 12c0-.87-.118-1.2-.316-1.342l-2.484-1.863a1 1 0 00-1.2.162l-2.4 2.1c-.2.2-.2.53 0 .73l2.4 2.1a1 1 0 001.2.162l2.484-1.863zM14.684 13.342C14.882 13.2 15 12.87 15 12c0-.87-.118-1.2-.316-1.342l-2.484-1.863a1 1 0 00-1.2.162l-2.4 2.1c-.2.2-.2.53 0 .73l2.4 2.1a1 1 0 001.2.162l2.484-1.863z"></path></svg>
-                                </div>
+                                <div class="flex items-center justify-center w-16 h-16 rounded-full bg-rose-soft/10 text-rose-soft mb-4"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.684 13.342C8.882 13.2 9 12.87 9 12c0-.87-.118-1.2-.316-1.342l-2.484-1.863a1 1 0 00-1.2.162l-2.4 2.1c-.2.2-.2.53 0 .73l2.4 2.1a1 1 0 001.2.162l2.484-1.863zM14.684 13.342C14.882 13.2 15 12.87 15 12c0-.87-.118-1.2-.316-1.342l-2.484-1.863a1 1 0 00-1.2.162l-2.4 2.1c-.2.2-.2.53 0 .73l2.4 2.1a1 1 0 001.2.162l2.484-1.863z"></path></svg></div>
                                 <h4 class="text-xl font-bold text-dark-charcoal mb-2">Social Media</h4>
                                 <p class="text-rose-soft text-sm">Instagram & Facebook</p>
                                 <div class="absolute bottom-4 text-xs text-accent font-semibold flex items-center gap-1">Flip for details <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></div>
                             </div>
                             <div class="card-face card-back">
                                 <h4 class="text-xl font-bold mb-3">Strategy & Design</h4>
-                                <p class="text-sm font-light leading-relaxed">Tailored posts, stories, and reels that create a cohesive aesthetic for your feed.</p>
+                                <p class="text-sm font-light leading-relaxed">Tailored posts, stories, and reels.</p>
                             </div>
                         </div>
                     </div>
-                    
                     <div class="flip-card-container reveal" style="transition-delay: 100ms;">
                         <div class="flip-card">
                             <div class="card-face card-front">
-                                <div class="flex items-center justify-center w-16 h-16 rounded-full bg-rose-soft/10 text-rose-soft mb-4">
-                                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 17v-1.353a2 2 0 00-2-2H4a2 2 0 01-2-2V7a2 2 0 012-2h16a2 2 0 012 2v9a2 2 0 01-2 2h-3.647a2 2 0 00-2 2V17h-2.353z"></path></svg>
-                                </div>
+                                <div class="flex items-center justify-center w-16 h-16 rounded-full bg-rose-soft/10 text-rose-soft mb-4"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 17v-1.353a2 2 0 00-2-2H4a2 2 0 01-2-2V7a2 2 0 012-2h16a2 2 0 012 2v9a2 2 0 01-2 2h-3.647a2 2 0 00-2 2V17h-2.353z"></path></svg></div>
                                 <h4 class="text-xl font-bold text-dark-charcoal mb-2">Marketing</h4>
                                 <p class="text-rose-soft text-sm">Flyers & Graphics</p>
                                 <div class="absolute bottom-4 text-xs text-accent font-semibold flex items-center gap-1">Flip for details <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></div>
                             </div>
                             <div class="card-face card-back">
                                 <h4 class="text-xl font-bold mb-3">Print & Digital</h4>
-                                <p class="text-sm font-light leading-relaxed">Brochures, presentation decks, and email graphics designed to convert.</p>
+                                <p class="text-sm font-light leading-relaxed">Brochures and decks.</p>
                             </div>
                         </div>
                     </div>
-
                     <div class="flip-card-container reveal" style="transition-delay: 200ms;">
                         <div class="flip-card">
                             <div class="card-face card-front">
-                                <div class="flex items-center justify-center w-16 h-16 rounded-full bg-rose-soft/10 text-rose-soft mb-4">
-                                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0h6m-6 0h-6m7-14v6m2-6h2m-2 0h-2m-2 0H8m2 0V5a2 2 0 012-2h2a2 2 0 012 2v6"></path></svg>
-                                </div>
+                                <div class="flex items-center justify-center w-16 h-16 rounded-full bg-rose-soft/10 text-rose-soft mb-4"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0h6m-6 0h-6m7-14v6m2-6h2m-2 0h-2m-2 0H8m2 0V5a2 2 0 012-2h2a2 2 0 012 2v6"></path></svg></div>
                                 <h4 class="text-xl font-bold text-dark-charcoal mb-2">Logo Design</h4>
                                 <p class="text-rose-soft text-sm">Brand Identity</p>
                                 <div class="absolute bottom-4 text-xs text-accent font-semibold flex items-center gap-1">Flip for details <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></div>
                             </div>
                             <div class="card-face card-back">
                                 <h4 class="text-xl font-bold mb-3">Visual Identity</h4>
-                                <p class="text-sm font-light leading-relaxed">Unique, memorable logos that define your brand and stand out in the market.</p>
+                                <p class="text-sm font-light leading-relaxed">Unique, memorable logos.</p>
                             </div>
                         </div>
                     </div>
-
                     <div class="flip-card-container reveal" style="transition-delay: 300ms;">
                         <div class="flip-card">
                             <div class="card-face card-front">
-                                <div class="flex items-center justify-center w-16 h-16 rounded-full bg-rose-soft/10 text-rose-soft mb-4">
-                                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 8h14M5 8a2 2 0 01-2-2v-3a1 1 0 011-1h16a1 1 0 011 1v3a2 2 0 01-2 2H5zm0 0h14m-12 5h4m-4 0v6a2 2 0 002 2h4a2 2 0 002-2v-6m-4 0v-2"></path></svg>
-                                </div>
+                                <div class="flex items-center justify-center w-16 h-16 rounded-full bg-rose-soft/10 text-rose-soft mb-4"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 8h14M5 8a2 2 0 01-2-2v-3a1 1 0 011-1h16a1 1 0 011 1v3a2 2 0 01-2 2H5zm0 0h14m-12 5h4m-4 0v6a2 2 0 002 2h4a2 2 0 002-2v-6m-4 0v-2"></path></svg></div>
                                 <h4 class="text-xl font-bold text-dark-charcoal mb-2">Packaging</h4>
                                 <p class="text-rose-soft text-sm">Product Aesthetics</p>
                                 <div class="absolute bottom-4 text-xs text-accent font-semibold flex items-center gap-1">Flip for details <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></div>
                             </div>
                             <div class="card-face card-back">
                                 <h4 class="text-xl font-bold mb-3">Shelf Appeal</h4>
-                                <p class="text-sm font-light leading-relaxed">Compliant, beautiful packaging labels that communicate value instantly.</p>
+                                <p class="text-sm font-light leading-relaxed">Beautiful packaging labels.</p>
                             </div>
                         </div>
                     </div>
@@ -412,298 +258,112 @@
 
                 <div class="relative w-full mb-24 reveal">
                     <div class="flex justify-between items-end mb-8 border-b border-gray-300 pb-4">
-                        <div>
-                            <h4 class="text-2xl sm:text-3xl font-bold text-dark-charcoal">Featured Highlights</h4>
-                            <p class="text-sm text-rose-soft mt-1">Swipe to see more work</p>
-                        </div>
+                        <div><h4 class="text-2xl sm:text-3xl font-bold text-dark-charcoal">Featured Highlights</h4><p class="text-sm text-rose-soft mt-1">Swipe to see more work</p></div>
                         <div class="flex gap-2">
                             <button onclick="scrollCarousel(-1)" class="bg-white hover:bg-gray-50 border border-gray-200 text-dark-charcoal p-2 rounded-full shadow-sm transition"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg></button>
                             <button onclick="scrollCarousel(1)" class="bg-white hover:bg-gray-50 border border-gray-200 text-dark-charcoal p-2 rounded-full shadow-sm transition"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></button>
                         </div>
                     </div>
-                    
                     <div id="carousel" class="carousel-container flex gap-6 px-1 py-4 w-full">
-                        
-                        <div class="carousel-item flex-shrink-0 w-80 sm:w-96 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 border border-gray-200 group cursor-pointer">
-                            <div class="overflow-hidden h-72 bg-gray-50 flex items-center justify-center">
-                                <img src="https://live.staticflickr.com/65535/54904040265_14cb5ec588.jpg" alt="Nidra Social Media" class="w-full h-full object-contain transition duration-500 group-hover:scale-105">
-                            </div>
-                            <div class="p-4 bg-white">
-                                <h5 class="font-bold text-dark-charcoal text-lg">Nidra Social Media</h5>
-                                <p class="text-sm text-rose-soft font-medium">Brand Identity</p>
-                            </div>
+                        <div class="carousel-item flex-shrink-0 w-80 sm:w-96 rounded-xl overflow-hidden shadow-lg border border-gray-200 group cursor-pointer">
+                            <div class="overflow-hidden h-72 bg-gray-50 flex items-center justify-center"><img src="https://live.staticflickr.com/65535/54904040265_14cb5ec588.jpg" alt="Nidra Social Media" class="w-full h-full object-contain transition duration-500 group-hover:scale-105"></div>
+                            <div class="p-4 bg-white"><h5 class="font-bold text-dark-charcoal text-lg">Nidra Social Media</h5></div>
                         </div>
-
-                        <div class="carousel-item flex-shrink-0 w-80 sm:w-96 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 border border-gray-200 group cursor-pointer">
-                            <div class="overflow-hidden h-72 bg-gray-50 flex items-center justify-center">
-                                <img src="https://live.staticflickr.com/65535/54948703093_d5bac81956.jpg" alt="Packaging Design" class="w-full h-full object-contain transition duration-500 group-hover:scale-105">
-                            </div>
-                            <div class="p-4 bg-white">
-                                <h5 class="font-bold text-dark-charcoal text-lg">Packaging Design</h5>
-                                <p class="text-sm text-rose-soft font-medium">Product Labeling</p>
-                            </div>
+                        <div class="carousel-item flex-shrink-0 w-80 sm:w-96 rounded-xl overflow-hidden shadow-lg border border-gray-200 group cursor-pointer">
+                            <div class="overflow-hidden h-72 bg-gray-50 flex items-center justify-center"><img src="https://live.staticflickr.com/65535/54948703093_d5bac81956.jpg" alt="Packaging Design" class="w-full h-full object-contain transition duration-500 group-hover:scale-105"></div>
+                            <div class="p-4 bg-white"><h5 class="font-bold text-dark-charcoal text-lg">Packaging Design</h5></div>
                         </div>
-
-                          <div class="carousel-item flex-shrink-0 w-80 sm:w-96 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 border border-gray-200 group cursor-pointer">
-                            <div class="overflow-hidden h-72 bg-gray-50 flex items-center justify-center">
-                                <img src="https://live.staticflickr.com/65535/54927093071_7807833714_z.jpg" alt="Neck Gaiter" class="w-full h-full object-contain transition duration-500 group-hover:scale-105">
-                            </div>
-                            <div class="p-4 bg-white">
-                                <h5 class="font-bold text-dark-charcoal text-lg">Neck Gaiter Mockup</h5>
-                                <p class="text-sm text-rose-soft font-medium">Apparel Design</p>
-                            </div>
+                        <div class="carousel-item flex-shrink-0 w-80 sm:w-96 rounded-xl overflow-hidden shadow-lg border border-gray-200 group cursor-pointer">
+                            <div class="overflow-hidden h-72 bg-gray-50 flex items-center justify-center"><img src="https://live.staticflickr.com/65535/54927093071_7807833714_z.jpg" alt="Neck Gaiter" class="w-full h-full object-contain transition duration-500 group-hover:scale-105"></div>
+                            <div class="p-4 bg-white"><h5 class="font-bold text-dark-charcoal text-lg">Neck Gaiter Mockup</h5></div>
                         </div>
-
-                        <div class="carousel-item flex-shrink-0 w-80 sm:w-96 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 border border-gray-200 group cursor-pointer">
-                            <div class="overflow-hidden h-72 bg-gray-50 flex items-center justify-center">
-                                <img src="https://live.staticflickr.com/65535/54903987754_357605665d_z.jpg" alt="YouTube Thumbnail" class="w-full h-full object-contain transition duration-500 group-hover:scale-105">
-                            </div>
-                            <div class="p-4 bg-white">
-                                <h5 class="font-bold text-dark-charcoal text-lg">YouTube Thumbnail</h5>
-                                <p class="text-sm text-rose-soft font-medium">Video Marketing</p>
-                            </div>
+                        <div class="carousel-item flex-shrink-0 w-80 sm:w-96 rounded-xl overflow-hidden shadow-lg border border-gray-200 group cursor-pointer">
+                            <div class="overflow-hidden h-72 bg-gray-50 flex items-center justify-center"><img src="https://live.staticflickr.com/65535/54903987754_357605665d_z.jpg" alt="YouTube Thumbnail" class="w-full h-full object-contain transition duration-500 group-hover:scale-105"></div>
+                            <div class="p-4 bg-white"><h5 class="font-bold text-dark-charcoal text-lg">YouTube Thumbnail</h5></div>
                         </div>
-
-                        <div class="carousel-item flex-shrink-0 w-80 sm:w-96 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 border border-gray-200 group cursor-pointer">
-                            <div class="overflow-hidden h-72 bg-gray-50 flex items-center justify-center">
-                                <img src="https://live.staticflickr.com/65535/54927396145_2e8f27b837_z.jpg" alt="Shirt Mockup" class="w-full h-full object-contain transition duration-500 group-hover:scale-105">
-                            </div>
-                            <div class="p-4 bg-white">
-                                <h5 class="font-bold text-dark-charcoal text-lg">Shirt Mockup</h5>
-                                <p class="text-sm text-rose-soft font-medium">Apparel Design</p>
-                            </div>
+                        <div class="carousel-item flex-shrink-0 w-80 sm:w-96 rounded-xl overflow-hidden shadow-lg border border-gray-200 group cursor-pointer">
+                            <div class="overflow-hidden h-72 bg-gray-50 flex items-center justify-center"><img src="https://live.staticflickr.com/65535/54927396145_2e8f27b837_z.jpg" alt="Shirt Mockup" class="w-full h-full object-contain transition duration-500 group-hover:scale-105"></div>
+                            <div class="p-4 bg-white"><h5 class="font-bold text-dark-charcoal text-lg">Shirt Mockup</h5></div>
                         </div>
-
                     </div>
                 </div>
+
                 <div id="full-gallery" class="text-center mb-12 reveal scroll-mt-24">
                     <h4 class="text-4xl font-extrabold text-dark-charcoal">Full Portfolio Gallery</h4>
                     <p class="text-rose-soft mt-2">Explore my work categorized by service type</p>
                 </div>
-
+                
                 <div class="mb-20 reveal">
                     <h3 class="text-2xl font-bold text-accent mb-6 border-l-4 border-accent pl-4">Social Media & Brand Identity</h3>
                     <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                        
-                        <div class="portfolio-item relative overflow-hidden rounded-xl shadow-lg border border-gray-200 group cursor-pointer">
-                            <img src="https://live.staticflickr.com/65535/54903963733_451be28eb5_z.jpg" alt="Social Media Content Sample" class="portfolio-image w-full h-auto object-cover">
-                            <div class="portfolio-overlay absolute inset-0 bg-black bg-opacity-50 flex items-end p-6">
-                                <div class="text-white transform translate-y-4 group-hover:translate-y-0 transition duration-300">
-                                    <p class="text-lg font-bold">Social Media Content</p>
-                                    <p class="text-sm font-light opacity-90">Instagram / Facebook</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="portfolio-item relative overflow-hidden rounded-xl shadow-lg border border-gray-200 group cursor-pointer">
-                            <img src="https://live.staticflickr.com/65535/54904040265_14cb5ec588.jpg" alt="Nidra Social Media" class="portfolio-image w-full h-auto object-cover">
-                            <div class="portfolio-overlay absolute inset-0 bg-black bg-opacity-50 flex items-end p-6">
-                                <div class="text-white transform translate-y-4 group-hover:translate-y-0 transition duration-300">
-                                    <p class="text-lg font-bold">Social Media Content</p>
-                                    <p class="text-sm font-light opacity-90">Nidra Brand</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="portfolio-item relative overflow-hidden rounded-xl shadow-lg border border-gray-200 group cursor-pointer">
-                            <img src="https://live.staticflickr.com/65535/54901201395_a052e1f973_z.jpg" alt="Logo Design" class="portfolio-image w-full h-auto object-cover">
-                            <div class="portfolio-overlay absolute inset-0 bg-black bg-opacity-50 flex items-end p-6">
-                                <div class="text-white transform translate-y-4 group-hover:translate-y-0 transition duration-300">
-                                    <p class="text-lg font-bold">Logo Design</p>
-                                    <p class="text-sm font-light opacity-90">Brand Identity</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="portfolio-item relative overflow-hidden rounded-xl shadow-lg border border-gray-200 group cursor-pointer">
-                            <img src="https://live.staticflickr.com/65535/54927376185_2d5f15fa0b_z.jpg" alt="Flyer Design Sample" class="portfolio-image w-full aspect-[626/640] object-cover">
-                            <div class="portfolio-overlay absolute inset-0 bg-black bg-opacity-50 flex items-end p-6">
-                                <div class="text-white transform translate-y-4 group-hover:translate-y-0 transition duration-300">
-                                    <p class="text-lg font-bold">Flyer</p>
-                                    <p class="text-sm font-light opacity-90">Marketing Material</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="portfolio-item relative overflow-hidden rounded-xl shadow-lg border border-gray-200 group cursor-pointer">
-                            <img src="https://live.staticflickr.com/65535/54948552086_c29ce86f67.jpg" alt="Black Friday Instagram Post" class="portfolio-image w-full h-auto object-cover">
-                            <div class="portfolio-overlay absolute inset-0 bg-black bg-opacity-50 flex items-end p-6">
-                                <div class="text-white transform translate-y-4 group-hover:translate-y-0 transition duration-300">
-                                    <p class="text-lg font-bold">Social Media Promo</p>
-                                    <p class="text-sm font-light opacity-90">Black Friday Campaign</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="portfolio-item relative overflow-hidden rounded-xl shadow-lg border border-gray-200 group cursor-pointer">
-                            <img src="https://live.staticflickr.com/65535/54947734832_7171208f1f.jpg" alt="Brand Logo Design" class="portfolio-image w-full h-auto object-cover">
-                            <div class="portfolio-overlay absolute inset-0 bg-black bg-opacity-50 flex items-end p-6">
-                                <div class="text-white transform translate-y-4 group-hover:translate-y-0 transition duration-300">
-                                    <p class="text-lg font-bold">Brand Logo</p>
-                                    <p class="text-sm font-light opacity-90">Brand Identity</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="portfolio-item relative overflow-hidden rounded-xl shadow-lg border border-gray-200 group cursor-pointer">
-                            <img src="https://live.staticflickr.com/65535/54949387571_9d38edd0aa.jpg" alt="Flyers Design" class="portfolio-image w-full aspect-[626/640] object-cover">
-                            <div class="portfolio-overlay absolute inset-0 bg-black bg-opacity-50 flex items-end p-6">
-                                <div class="text-white transform translate-y-4 group-hover:translate-y-0 transition duration-300">
-                                    <p class="text-lg font-bold">Flyers</p>
-                                    <p class="text-sm font-light opacity-90">Marketing Material</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="portfolio-item relative overflow-hidden rounded-xl shadow-lg border border-gray-200 group cursor-pointer">
-                            <img src="https://live.staticflickr.com/65535/54949695935_d6ba867178_z.jpg" alt="Promotional Flyer Design" class="portfolio-image w-full aspect-[626/640] object-cover">
-                            <div class="portfolio-overlay absolute inset-0 bg-black bg-opacity-50 flex items-end p-6">
-                                <div class="text-white transform translate-y-4 group-hover:translate-y-0 transition duration-300">
-                                    <p class="text-lg font-bold">Flyer Design</p>
-                                    <p class="text-sm font-light opacity-90">Marketing Material</p>
-                                </div>
-                            </div>
-                        </div>
-
+                        <div class="portfolio-item relative overflow-hidden rounded-xl shadow-lg border border-gray-200 group cursor-pointer"><img src="https://live.staticflickr.com/65535/54903963733_451be28eb5_z.jpg" class="portfolio-image w-full h-auto object-cover"></div>
+                        <div class="portfolio-item relative overflow-hidden rounded-xl shadow-lg border border-gray-200 group cursor-pointer"><img src="https://live.staticflickr.com/65535/54904040265_14cb5ec588.jpg" class="portfolio-image w-full h-auto object-cover"></div>
+                        <div class="portfolio-item relative overflow-hidden rounded-xl shadow-lg border border-gray-200 group cursor-pointer"><img src="https://live.staticflickr.com/65535/54901201395_a052e1f973_z.jpg" class="portfolio-image w-full h-auto object-cover"></div>
+                        <div class="portfolio-item relative overflow-hidden rounded-xl shadow-lg border border-gray-200 group cursor-pointer"><img src="https://live.staticflickr.com/65535/54927376185_2d5f15fa0b_z.jpg" class="portfolio-image w-full aspect-[626/640] object-cover"></div>
+                        <div class="portfolio-item relative overflow-hidden rounded-xl shadow-lg border border-gray-200 group cursor-pointer"><img src="https://live.staticflickr.com/65535/54948552086_c29ce86f67.jpg" class="portfolio-image w-full h-auto object-cover"></div>
+                        <div class="portfolio-item relative overflow-hidden rounded-xl shadow-lg border border-gray-200 group cursor-pointer"><img src="https://live.staticflickr.com/65535/54947734832_7171208f1f.jpg" class="portfolio-image w-full h-auto object-cover"></div>
+                        <div class="portfolio-item relative overflow-hidden rounded-xl shadow-lg border border-gray-200 group cursor-pointer"><img src="https://live.staticflickr.com/65535/54949387571_9d38edd0aa.jpg" class="portfolio-image w-full aspect-[626/640] object-cover"></div>
+                        <div class="portfolio-item relative overflow-hidden rounded-xl shadow-lg border border-gray-200 group cursor-pointer"><img src="https://live.staticflickr.com/65535/54949695935_d6ba867178_z.jpg" class="portfolio-image w-full aspect-[626/640] object-cover"></div>
                     </div>
                 </div>
 
                 <div class="mb-20 reveal">
                     <h3 class="text-2xl font-bold text-accent mb-6 border-l-4 border-accent pl-4">Packaging & Product Design</h3>
                     <div class="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
-                        
-                        <div class="portfolio-item relative overflow-hidden rounded-xl shadow-lg border border-gray-200 group cursor-pointer break-inside-avoid">
-                            <img src="https://live.staticflickr.com/65535/54927089251_508584c156_z.jpg" alt="Packaging Design Sample" class="portfolio-image w-full h-auto object-cover">
-                            <div class="portfolio-overlay absolute inset-0 bg-black bg-opacity-50 flex items-end p-6">
-                                <div class="text-white transform translate-y-4 group-hover:translate-y-0 transition duration-300">
-                                    <p class="text-lg font-bold">Packaging Design</p>
-                                    <p class="text-sm font-light opacity-90">Product Labeling</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="portfolio-item relative overflow-hidden rounded-xl shadow-lg border border-gray-200 group cursor-pointer break-inside-avoid">
-                            <img src="https://live.staticflickr.com/65535/54948703093_d5bac81956.jpg" alt="Packaging Design Sample 2" class="portfolio-image w-full h-auto object-cover">
-                            <div class="portfolio-overlay absolute inset-0 bg-black bg-opacity-50 flex items-end p-6">
-                                <div class="text-white transform translate-y-4 group-hover:translate-y-0 transition duration-300">
-                                    <p class="text-lg font-bold">Packaging Design</p>
-                                    <p class="text-sm font-light opacity-90">Product Labeling</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="portfolio-item relative overflow-hidden rounded-xl shadow-lg border border-gray-200 group cursor-pointer break-inside-avoid">
-                            <img src="https://live.staticflickr.com/65535/54948809864_8373fd04e3.jpg" alt="Packaging Design Sample 3" class="portfolio-image w-full h-auto object-cover">
-                            <div class="portfolio-overlay absolute inset-0 bg-black bg-opacity-50 flex items-end p-6">
-                                <div class="text-white transform translate-y-4 group-hover:translate-y-0 transition duration-300">
-                                    <p class="text-lg font-bold">Packaging Design</p>
-                                    <p class="text-sm font-light opacity-90">Product Labeling</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="portfolio-item relative overflow-hidden rounded-xl shadow-lg border border-gray-200 group cursor-pointer break-inside-avoid">
-                            <img src="https://live.staticflickr.com/65535/54927396145_2e8f27b837_z.jpg" alt="Goldenwest Shirt Mockup" class="portfolio-image w-full h-auto object-cover">
-                            <div class="portfolio-overlay absolute inset-0 bg-black bg-opacity-50 flex items-end p-6">
-                                <div class="text-white transform translate-y-4 group-hover:translate-y-0 transition duration-300">
-                                    <p class="text-lg font-bold">Product Designs</p>
-                                    <p class="text-sm font-light opacity-90">Apparel Mockups</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="portfolio-item relative overflow-hidden rounded-xl shadow-lg border border-gray-200 group cursor-pointer break-inside-avoid">
-                            <img src="https://live.staticflickr.com/65535/54927093071_7807833714_z.jpg" alt="Goldenwest Neck Gaiter Design" class="portfolio-image w-full h-auto object-cover">
-                            <div class="portfolio-overlay absolute inset-0 bg-black bg-opacity-50 flex items-end p-6">
-                                <div class="text-white transform translate-y-4 group-hover:translate-y-0 transition duration-300">
-                                    <p class="text-lg font-bold">Product Designs</p>
-                                    <p class="text-sm font-light opacity-90">Neck Gaiter Mockup</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="portfolio-item relative overflow-hidden rounded-xl shadow-lg border border-gray-200 group cursor-pointer break-inside-avoid">
-                            <img src="https://live.staticflickr.com/65535/54948751868_93160ea299_z.jpg" alt="New Product Design Sample" class="portfolio-image w-full h-auto object-cover">
-                            <div class="portfolio-overlay absolute inset-0 bg-black bg-opacity-50 flex items-end p-6">
-                                <div class="text-white transform translate-y-4 group-hover:translate-y-0 transition duration-300">
-                                    <p class="text-lg font-bold">Product Designs</p>
-                                    <p class="text-sm font-light opacity-90">Apparel/Merchandise Design</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="portfolio-item relative overflow-hidden rounded-xl shadow-lg border border-gray-200 group cursor-pointer break-inside-avoid">
-                            <img src="https://live.staticflickr.com/65535/54947668482_efce84e348.jpg" alt="Custom Packaging Design" class="portfolio-image w-full h-auto object-cover">
-                            <div class="portfolio-overlay absolute inset-0 bg-black bg-opacity-50 flex items-end p-6">
-                                <div class="text-white transform translate-y-4 group-hover:translate-y-0 transition duration-300">
-                                    <p class="text-lg font-bold">Packaging Design</p>
-                                    <p class="text-sm font-light opacity-90">Product Labeling</p>
-                                </div>
-                            </div>
-                        </div>
-
+                        <div class="portfolio-item relative overflow-hidden rounded-xl shadow-lg border border-gray-200 group cursor-pointer break-inside-avoid"><img src="https://live.staticflickr.com/65535/54927089251_508584c156_z.jpg" class="portfolio-image w-full h-auto object-cover"></div>
+                        <div class="portfolio-item relative overflow-hidden rounded-xl shadow-lg border border-gray-200 group cursor-pointer break-inside-avoid"><img src="https://live.staticflickr.com/65535/54948703093_d5bac81956.jpg" class="portfolio-image w-full h-auto object-cover"></div>
+                        <div class="portfolio-item relative overflow-hidden rounded-xl shadow-lg border border-gray-200 group cursor-pointer break-inside-avoid"><img src="https://live.staticflickr.com/65535/54948809864_8373fd04e3.jpg" class="portfolio-image w-full h-auto object-cover"></div>
+                        <div class="portfolio-item relative overflow-hidden rounded-xl shadow-lg border border-gray-200 group cursor-pointer break-inside-avoid"><img src="https://live.staticflickr.com/65535/54927396145_2e8f27b837_z.jpg" class="portfolio-image w-full h-auto object-cover"></div>
+                        <div class="portfolio-item relative overflow-hidden rounded-xl shadow-lg border border-gray-200 group cursor-pointer break-inside-avoid"><img src="https://live.staticflickr.com/65535/54927093071_7807833714_z.jpg" class="portfolio-image w-full h-auto object-cover"></div>
+                        <div class="portfolio-item relative overflow-hidden rounded-xl shadow-lg border border-gray-200 group cursor-pointer break-inside-avoid"><img src="https://live.staticflickr.com/65535/54948751868_93160ea299_z.jpg" class="portfolio-image w-full h-auto object-cover"></div>
+                        <div class="portfolio-item relative overflow-hidden rounded-xl shadow-lg border border-gray-200 group cursor-pointer break-inside-avoid"><img src="https://live.staticflickr.com/65535/54947668482_efce84e348.jpg" class="portfolio-image w-full h-auto object-cover"></div>
                     </div>
                 </div>
 
                 <div class="mb-16 reveal">
                     <h3 class="text-2xl font-bold text-accent mb-6 border-l-4 border-accent pl-4">YouTube & Video Marketing</h3>
                     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                        
-                        <div class="portfolio-item relative overflow-hidden rounded-xl shadow-lg border border-gray-200 group cursor-pointer">
-                            <img src="https://live.staticflickr.com/65535/54903987754_357605665d_z.jpg" alt="YouTube Thumbnails" class="portfolio-image w-full h-auto object-cover">
-                            <div class="portfolio-overlay absolute inset-0 bg-black bg-opacity-50 flex items-end p-6">
-                                <div class="text-white transform translate-y-4 group-hover:translate-y-0 transition duration-300">
-                                    <p class="text-lg font-bold">YouTube Thumbnails</p>
-                                    <p class="text-sm font-light opacity-90">Video Marketing</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="portfolio-item relative overflow-hidden rounded-xl shadow-lg border border-gray-200 group cursor-pointer">
-                            <img src="https://live.staticflickr.com/65535/54902863817_71b77c9194.jpg" alt="YouTube Thumbnail Design" class="portfolio-image w-full h-auto object-cover">
-                            <div class="portfolio-overlay absolute inset-0 bg-black bg-opacity-50 flex items-end p-6">
-                                <div class="text-white transform translate-y-4 group-hover:translate-y-0 transition duration-300">
-                                    <p class="text-lg font-bold">YouTube Thumbnails</p>
-                                    <p class="text-sm font-light opacity-90">Video Marketing</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="portfolio-item relative overflow-hidden rounded-xl shadow-lg border border-gray-200 group cursor-pointer">
-                            <img src="https://live.staticflickr.com/65535/54904040240_ecd430c567.jpg" alt="YouTube Thumbnail Sample" class="portfolio-image w-full h-auto object-cover">
-                            <div class="portfolio-overlay absolute inset-0 bg-black bg-opacity-50 flex items-end p-6">
-                                <div class="text-white transform translate-y-4 group-hover:translate-y-0 transition duration-300">
-                                    <p class="text-lg font-bold">YouTube Thumbnails</p>
-                                    <p class="text-sm font-light opacity-90">Video Marketing</p>
-                                </div>
-                            </div>
-                        </div>
-
+                        <div class="portfolio-item relative overflow-hidden rounded-xl shadow-lg border border-gray-200 group cursor-pointer"><img src="https://live.staticflickr.com/65535/54903987754_357605665d_z.jpg" class="portfolio-image w-full h-auto object-cover"></div>
+                        <div class="portfolio-item relative overflow-hidden rounded-xl shadow-lg border border-gray-200 group cursor-pointer"><img src="https://live.staticflickr.com/65535/54902863817_71b77c9194.jpg" class="portfolio-image w-full h-auto object-cover"></div>
+                        <div class="portfolio-item relative overflow-hidden rounded-xl shadow-lg border border-gray-200 group cursor-pointer"><img src="https://live.staticflickr.com/65535/54904040240_ecd430c567.jpg" class="portfolio-image w-full h-auto object-cover"></div>
                     </div>
                 </div>
 
-                <div class="mt-20 mb-0 reveal">
+                <div id="contact-section" class="mt-20 mb-0 reveal scroll-mt-24">
                     <h4 class="text-accent font-bold text-xl mb-6 flex items-center justify-center gap-2">
                         <span class="w-2 h-2 bg-accent rounded-full animate-pulse"></span>
-                        Need to connect right away?
+                        Send me a message directly
                     </h4>
+                    
+                    <div class="w-full max-w-lg mx-auto bg-white p-8 rounded-2xl shadow-lg border border-gray-100 mb-12">
+                        <form action="https://formspree.io/f/xnnokzez" method="POST" class="space-y-4">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
+                                <input type="text" name="name" id="name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent outline-none transition" placeholder="Jane Doe">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Your Email</label>
+                                <input type="email" name="email" id="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent outline-none transition" placeholder="jane@example.com">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                                <textarea name="message" id="message" rows="4" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent outline-none transition" placeholder="How can I help you?"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-accent hover:bg-rose-200 text-dark-charcoal font-bold py-3 rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+
                     <div class="flex flex-wrap justify-center gap-4">
-                        
                         <a href="https://www.linkedin.com/in/maria-cristina-garcia-371486388/" target="_blank" class="contact-anim flex items-center gap-2 px-5 py-3 bg-white border border-gray-200 rounded-full shadow-sm hover:shadow-md hover:border-accent hover:-translate-y-1 transition-all duration-300 group" style="animation-delay: 100ms;">
                             <svg class="w-5 h-5 text-gray-400 group-hover:text-[#0077b5] transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                             <span class="text-base font-medium text-rose-soft group-hover:text-dark-charcoal">LinkedIn</span>
                         </a>
-
-                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mcristinagarcia.va@gmail.com" target="_blank" class="contact-anim flex items-center gap-2 px-5 py-3 bg-white border border-gray-200 rounded-full shadow-sm hover:shadow-md hover:border-accent hover:-translate-y-1 transition-all duration-300 group" style="animation-delay: 200ms;">
-                                <svg class="w-5 h-5 text-gray-400 group-hover:text-red-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                            <span class="text-base font-medium text-rose-soft group-hover:text-dark-charcoal">Email Me</span>
-                        </a>
-
                         <a href="https://wa.me/639165239895" target="_blank" class="contact-anim flex items-center gap-2 px-5 py-3 bg-white border border-gray-200 rounded-full shadow-sm hover:shadow-md hover:border-accent hover:-translate-y-1 transition-all duration-300 group" style="animation-delay: 300ms;">
                             <svg class="w-5 h-5 text-gray-400 group-hover:text-[#25D366] transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
                             <span class="text-base font-medium text-rose-soft group-hover:text-dark-charcoal">WhatsApp</span>
                         </a>
-
                         <a href="https://mcristinagarcia.github.io/mcg-resume/" target="_blank" class="contact-anim flex items-center gap-2 px-5 py-3 bg-accent text-dark-charcoal rounded-full shadow-md hover:shadow-lg hover:bg-white hover:-translate-y-1 transition-all duration-300 group" style="animation-delay: 400ms;">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
                             <span class="text-base font-bold">Resume</span>
@@ -714,28 +374,21 @@
             </div>
         </section>
 
-        <style>
-            #portfolio-page { padding-bottom: 1rem !important; }
-        </style>
-        
         <section id="tools" class="bg-page-light !pt-4">
             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <div class="mb-10 reveal">
                     <h3 class="text-base text-rose-soft font-semibold tracking-wide uppercase">Software Proficiency</h3>
                     <p class="mt-2 text-3xl sm:text-4xl font-extrabold text-dark-charcoal">Tools I Use to Deliver Results</p>
                 </div>
-
                 <div class="flex flex-wrap justify-center gap-3 text-lg mb-8 reveal" style="transition-delay: 200ms;">
                     <span class="bg-white text-dark-charcoal text-base font-medium px-4 py-2 rounded-full shadow-md border border-accent/30 hover:shadow-lg hover:border-accent transition cursor-default">Canva</span>
                     <span class="bg-white text-dark-charcoal text-base font-medium px-4 py-2 rounded-full shadow-md border border-accent/30 hover:shadow-lg hover:border-accent transition cursor-default">Adobe Photoshop</span>
                     <span class="bg-white text-dark-charcoal text-base font-medium px-4 py-2 rounded-full shadow-md border border-accent/30 hover:shadow-lg hover:border-accent transition cursor-default">CapCut</span>
                     <span class="bg-white text-dark-charcoal text-base font-medium px-4 py-2 rounded-full shadow-md border border-accent/30 hover:shadow-lg hover:border-accent transition cursor-default">DaVinci Resolve</span>
-                    
                     <span class="bg-dark-charcoal text-white text-base font-medium px-4 py-2 rounded-full shadow-md hover:bg-gray-800 transition cursor-default">Hootsuite</span>
                     <span class="bg-dark-charcoal text-white text-base font-medium px-4 py-2 rounded-full shadow-md hover:bg-gray-800 transition cursor-default">Buffer</span>
                     <span class="bg-dark-charcoal text-white text-base font-medium px-4 py-2 rounded-full shadow-md hover:bg-gray-800 transition cursor-default">Trello</span>
                     <span class="bg-dark-charcoal text-white text-base font-medium px-4 py-2 rounded-full shadow-md hover:bg-gray-800 transition cursor-default">ClickUp</span>
-                    
                     <span class="bg-rose-soft text-white text-base font-medium px-4 py-2 rounded-full shadow-md hover:bg-rose-400 transition cursor-default">Meta Business Suite</span>
                     <span class="bg-rose-soft text-white text-base font-medium px-4 py-2 rounded-full shadow-md hover:bg-rose-400 transition cursor-default">Other industry-specific tools</span>
                 </div>
@@ -753,111 +406,41 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-400">
             <p class="text-xl font-semibold text-white mb-2">Maria Cristina Garcia</p>
             <p class="text-sm mb-4">Creative Virtual Assistant | Global Standards</p>
-            
             <div class="flex flex-col items-center gap-2 text-sm">
-                <a href="mailto:mcristinagarcia.va@gmail.com" target="_blank" class="hover:text-white transition">mcristinagarcia.va@gmail.com</a>
-                <a href="https://wa.me/639165239895" target="_blank" class="hover:text-white transition">(+63) 916 5239895</a>
+                <a href="mailto:mcristinagarcia.va@gmail.com" class="hover:text-white transition">mcristinagarcia.va@gmail.com</a>
+                <a href="https://wa.me/639165239895" class="hover:text-white transition">(+63) 916 5239895</a>
             </div>
-
             <p class="mt-8 text-xs text-gray-500">&copy; 2024 Maria Cristina Garcia. All Rights Reserved.</p>
         </div>
     </footer>
 
     <script>
-        // --- CAROUSEL LOGIC (Auto-Play) ---
+        // --- CAROUSEL LOGIC ---
         const container = document.getElementById('carousel');
         let autoScrollInterval;
         let restartTimeout;
+        function startAutoScroll() { stopAutoScroll(); autoScrollInterval = setInterval(() => { if (container.scrollLeft + container.clientWidth >= container.scrollWidth) { container.scrollTo({ left: 0, behavior: 'smooth' }); } else { container.scrollBy({ left: 300, behavior: 'smooth' }); } }, 3000); }
+        function stopAutoScroll() { clearInterval(autoScrollInterval); }
+        function scrollCarousel(direction) { stopAutoScroll(); clearTimeout(restartTimeout); const scrollAmount = 300; container.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' }); restartTimeout = setTimeout(startAutoScroll, 5000); }
+        container.addEventListener('mouseenter', stopAutoScroll); container.addEventListener('mouseleave', startAutoScroll); startAutoScroll();
 
-        function startAutoScroll() {
-            stopAutoScroll(); // Safety clear
-            autoScrollInterval = setInterval(() => {
-                if (container.scrollLeft + container.clientWidth >= container.scrollWidth) {
-                    container.scrollTo({ left: 0, behavior: 'smooth' });
-                } else {
-                    container.scrollBy({ left: 300, behavior: 'smooth' });
-                }
-            }, 3000);
-        }
-
-        function stopAutoScroll() {
-            clearInterval(autoScrollInterval);
-        }
-
-        // Manual Controls
-        function scrollCarousel(direction) {
-            stopAutoScroll();
-            clearTimeout(restartTimeout);
-            
-            const scrollAmount = 300; 
-            container.scrollBy({
-                left: direction * scrollAmount,
-                behavior: 'smooth'
-            });
-            // Restart after 5 seconds of inactivity
-            restartTimeout = setTimeout(startAutoScroll, 5000);
-        }
-
-        // Start auto-scroll on load, pause on hover
-        container.addEventListener('mouseenter', stopAutoScroll);
-        container.addEventListener('mouseleave', startAutoScroll);
-        startAutoScroll();
-
-
-        // --- SCROLL REVEAL ANIMATION ---
+        // --- SCROLL REVEAL ---
         document.addEventListener('DOMContentLoaded', () => {
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: "0px 0px -50px 0px"
-            };
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('active');
-                    }
-                });
-            }, observerOptions);
-
-            document.querySelectorAll('.reveal').forEach(el => {
-                observer.observe(el);
-            });
+            const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('active'); } }); }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+            document.querySelectorAll('.reveal').forEach(el => { observer.observe(el); });
         });
 
-
-        // --- TYPEWRITER EFFECT ---
+        // --- TYPEWRITER ---
         const words = ["Stand Out", "Scale Up", "Look Amazing"];
-        let i = 0;
-        let timer;
-
+        let i = 0; let timer;
         function typeWriter() {
-            const heading = document.getElementById("typewriter");
-            const word = words[i];
-            let currentText = heading.innerText;
-            
-            if (currentText.length < word.length && !heading.classList.contains('deleting')) {
-                // Typing
-                heading.innerText = word.substring(0, currentText.length + 1);
-                timer = setTimeout(typeWriter, 100);
-            } else if (currentText.length === word.length && !heading.classList.contains('deleting')) {
-                // Pause at end
-                heading.classList.add('deleting');
-                timer = setTimeout(typeWriter, 2000);
-            } else if (currentText.length > 0 && heading.classList.contains('deleting')) {
-                // Deleting
-                heading.innerText = word.substring(0, currentText.length - 1);
-                timer = setTimeout(typeWriter, 50);
-            } else {
-                // Switch word
-                heading.classList.remove('deleting');
-                i = (i + 1) % words.length;
-                timer = setTimeout(typeWriter, 500);
-            }
+            const heading = document.getElementById("typewriter"); const word = words[i]; let currentText = heading.innerText;
+            if (currentText.length < word.length && !heading.classList.contains('deleting')) { heading.innerText = word.substring(0, currentText.length + 1); timer = setTimeout(typeWriter, 100); }
+            else if (currentText.length === word.length && !heading.classList.contains('deleting')) { heading.classList.add('deleting'); timer = setTimeout(typeWriter, 2000); }
+            else if (currentText.length > 0 && heading.classList.contains('deleting')) { heading.innerText = word.substring(0, currentText.length - 1); timer = setTimeout(typeWriter, 50); }
+            else { heading.classList.remove('deleting'); i = (i + 1) % words.length; timer = setTimeout(typeWriter, 500); }
         }
-        
-        // Start typewriter after initial load
         setTimeout(typeWriter, 1000);
-
     </script>
 </body>
 </html>
