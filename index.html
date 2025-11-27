@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Updated Title as requested -->
     <title>Elevate Your Brand. Reclaim Your Time.</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
@@ -126,8 +125,8 @@
         }
 
         /* Geometry Calculation for 235px width:
-           Radius ~ Width / (2 * tan(36deg)) = 235 / 1.45 ≈ 162px.
-           We use 220px to add nice spacing gaps between cards.
+            Radius ~ Width / (2 * tan(36deg)) = 235 / 1.45 ≈ 162px.
+            We use 220px to add nice spacing gaps between cards.
         */
         .hero-item:nth-child(1) { transform: rotateY(0deg) translateZ(220px); }
         .hero-item:nth-child(2) { transform: rotateY(72deg) translateZ(220px); }
@@ -212,14 +211,10 @@
 
     <main>
         
-        <!-- === HERO SECTION === -->
-        <!-- Added !pt-0 to override default section padding and remove top space -->
         <section id="home" class="bg-page-light relative overflow-hidden !pt-0">
-            <!-- Reduced bottom padding from pb-10 to pb-0 and lg:pb-0 to minimize space -->
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-4 pb-0 lg:pt-16 lg:pb-0">
                 <div class="lg:grid lg:grid-cols-12 lg:gap-12 items-center">
                     
-                    <!-- Hero Text -->
                     <div class="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left flex flex-col justify-center z-10 relative reveal active">
                         <div class="inline-flex items-center px-3 py-1 rounded-full border border-accent/30 bg-white text-dark-charcoal text-xs font-bold uppercase tracking-wide mb-6 w-fit mx-auto lg:mx-0 shadow-sm hover:shadow-md transition">
                             <span class="w-2 h-2 bg-accent rounded-full mr-2 animate-ping"></span>
@@ -228,7 +223,6 @@
                         
                         <h1 class="text-4xl tracking-tight font-extrabold text-dark-charcoal sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl mb-6 min-h-[6rem] sm:min-h-auto">
                             I help brands <br>
-                            <!-- Adjusted to Charcoal Gray as requested for Main Text -->
                             <span class="text-dark-charcoal typing-cursor" id="typewriter">Stand Out</span>
                         </h1>
                         
@@ -236,35 +230,29 @@
                             Your all-in-one creative partner. I combine reliable <b>Virtual Assistance</b> with professional <b>Graphic Design</b> to give your business the global edge it deserves.
                         </p>
                         
-                        <!-- Contact Section Added Back to Hero -->
                         <div class="mt-8">
                             <h4 class="text-dark-charcoal font-bold text-lg mb-4 flex items-center justify-center lg:justify-start gap-2 reveal">
                                 <span class="w-2 h-2 bg-accent rounded-full animate-pulse"></span>
                                 Need to connect right away?
                             </h4>
-                            <!-- Horizontal Container using flex-wrap and gap -->
                             <div class="flex flex-wrap justify-center lg:justify-start gap-3">
                                 
-                                <!-- LinkedIn Pill -->
                                 <a href="https://www.linkedin.com/in/maria-cristina-garcia-371486388/" target="_blank" class="contact-anim flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-full shadow-sm hover:shadow-md hover:border-accent hover:-translate-y-1 transition-all duration-300 group" style="animation-delay: 100ms;">
                                     <svg class="w-5 h-5 text-gray-400 group-hover:text-[#0077b5] transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                                     <span class="text-sm font-medium text-rose-soft group-hover:text-dark-charcoal">LinkedIn</span>
                                 </a>
 
-                                <!-- Email Pill -->
                                 <a href="mailto:mcristinagarcia.va@gmail.com" class="contact-anim flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-full shadow-sm hover:shadow-md hover:border-accent hover:-translate-y-1 transition-all duration-300 group" style="animation-delay: 200ms;">
                                      <svg class="w-5 h-5 text-gray-400 group-hover:text-red-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                                     <span class="text-sm font-medium text-rose-soft group-hover:text-dark-charcoal">Email Me</span>
                                 </a>
 
-                                <!-- Whatsapp Pill -->
                                 <a href="https://wa.me/639165239895" target="_blank" class="contact-anim flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-full shadow-sm hover:shadow-md hover:border-accent hover:-translate-y-1 transition-all duration-300 group" style="animation-delay: 300ms;">
                                     <svg class="w-5 h-5 text-gray-400 group-hover:text-[#25D366] transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
                                     <span class="text-sm font-medium text-rose-soft group-hover:text-dark-charcoal">WhatsApp</span>
                                 </a>
 
-                                <!-- Resume Button -->
-                                <a href="https://sites.google.com/view/mcristinagarcia/home" target="_blank" class="contact-anim flex items-center gap-2 px-4 py-2 bg-accent text-dark-charcoal rounded-full shadow-md hover:shadow-lg hover:bg-white hover:-translate-y-1 transition-all duration-300 group" style="animation-delay: 400ms;">
+                                <a href="https://mcristinagarcia.github.io/mcg-resume/" target="_blank" class="contact-anim flex items-center gap-2 px-4 py-2 bg-accent text-dark-charcoal rounded-full shadow-md hover:shadow-lg hover:bg-white hover:-translate-y-1 transition-all duration-300 group" style="animation-delay: 400ms;">
                                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
                                     <span class="text-sm font-bold">Resume</span>
                                 </a>
@@ -272,34 +260,27 @@
                         </div>
                     </div>
 
-                    <!-- Hero Visuals (UPDATED: 3D ROTATING CAROUSEL 626x640) -->
                     <div class="mt-12 lg:mt-0 lg:col-span-6 relative reveal">
                         <div class="hero-carousel-container">
                             <div class="hero-spinner">
-                                <!-- Item 1: Social Media Content Sample -->
                                 <div class="hero-item">
                                     <img src="https://live.staticflickr.com/65535/54903963733_451be28eb5_z.jpg" alt="Social Media Content Sample">
                                 </div>
-                                <!-- Item 2: Nidra Social Media -->
                                 <div class="hero-item">
                                     <img src="https://live.staticflickr.com/65535/54904040265_14cb5ec588.jpg" alt="Nidra Social Media">
                                 </div>
-                                <!-- Item 3: Logo Design -->
                                 <div class="hero-item">
                                     <img src="https://live.staticflickr.com/65535/54901201395_a052e1f973_z.jpg" alt="Logo Design">
                                 </div>
-                                <!-- Item 4: Flyer Design Sample -->
                                 <div class="hero-item">
                                     <img src="https://live.staticflickr.com/65535/54927376185_2d5f15fa0b_z.jpg" alt="Flyer Design Sample">
                                 </div>
-                                <!-- Item 5: Black Friday Instagram Post -->
                                 <div class="hero-item">
                                     <img src="https://live.staticflickr.com/65535/54948552086_c29ce86f67.jpg" alt="Black Friday Instagram Post">
                                 </div>
                             </div>
                         </div>
                         
-                        <!-- Background Blob moved here for context -->
                         <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-rose-soft/30 blur-[80px] rounded-full -z-10 animate-pulse"></div>
                     </div>
                     
@@ -308,8 +289,6 @@
         </section>
 
 
-        <!-- === ABOUT SECTION === -->
-        <!-- Changed !pb-0 to !pb-8 to add a little space at the bottom -->
         <section id="about" class="bg-white !pt-4 !pb-8">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center lg:justify-between reveal">
                 
@@ -323,7 +302,6 @@
                 </div>
                 
                 <div class="lg:w-2/3 lg:pl-16 text-center lg:text-left">
-                    <!-- "About Me" label removed -->
                     <h3 class="text-3xl sm:text-4xl font-extrabold text-dark-charcoal mb-6">Elevate Your Brand. Reclaim Your Time.</h3>
                     <p class="text-lg text-rose-soft mb-4">
                         Hello, I'm <b>Maria Cristina Garcia</b>. I believe that great design isn't just about looking good—it's about working smarter. 
@@ -354,19 +332,15 @@
             </div>
         </section>
 
-        <!-- Changed !pt-4 to !pt-8 to add a little space at the top -->
         <section id="portfolio-page" class="bg-page-light !pt-8">
              <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <!-- Reduced margin bottom from mb-16 to mb-8 to tighten the header space -->
                 <div class="text-center mb-8 reveal">
                     <h3 class="text-base text-rose-soft font-semibold tracking-wide uppercase">Services</h3>
                     <p class="mt-2 text-3xl sm:text-4xl font-extrabold text-dark-charcoal">What I Can Do For You</p>
                     <p class="text-sm text-rose-soft mt-2 italic">(Hover cards to flip)</p>
                 </div>
 
-                <!-- SERVICES FLIPPING CARDS -->
                 <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-24">
-                    <!-- Card 1 -->
                     <div class="flip-card-container reveal">
                         <div class="flip-card">
                             <div class="card-face card-front">
@@ -384,7 +358,6 @@
                         </div>
                     </div>
                     
-                    <!-- Card 2 -->
                     <div class="flip-card-container reveal" style="transition-delay: 100ms;">
                         <div class="flip-card">
                             <div class="card-face card-front">
@@ -402,7 +375,6 @@
                         </div>
                     </div>
 
-                    <!-- Card 3 -->
                     <div class="flip-card-container reveal" style="transition-delay: 200ms;">
                         <div class="flip-card">
                             <div class="card-face card-front">
@@ -420,7 +392,6 @@
                         </div>
                     </div>
 
-                    <!-- Card 4 -->
                     <div class="flip-card-container reveal" style="transition-delay: 300ms;">
                         <div class="flip-card">
                             <div class="card-face card-front">
@@ -439,7 +410,6 @@
                     </div>
                 </div>
 
-                <!-- === FEATURED WORK CAROUSEL (AUTO SCROLL) === -->
                 <div class="relative w-full mb-24 reveal">
                     <div class="flex justify-between items-end mb-8 border-b border-gray-300 pb-4">
                         <div>
@@ -452,10 +422,8 @@
                         </div>
                     </div>
                     
-                    <!-- Carousel Container -->
                     <div id="carousel" class="carousel-container flex gap-6 px-1 py-4 w-full">
                         
-                        <!-- Slide 1 -->
                         <div class="carousel-item flex-shrink-0 w-80 sm:w-96 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 border border-gray-200 group cursor-pointer">
                             <div class="overflow-hidden h-72 bg-gray-50 flex items-center justify-center">
                                 <img src="https://live.staticflickr.com/65535/54904040265_14cb5ec588.jpg" alt="Nidra Social Media" class="w-full h-full object-contain transition duration-500 group-hover:scale-105">
@@ -466,7 +434,6 @@
                             </div>
                         </div>
 
-                        <!-- Slide 2 -->
                         <div class="carousel-item flex-shrink-0 w-80 sm:w-96 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 border border-gray-200 group cursor-pointer">
                             <div class="overflow-hidden h-72 bg-gray-50 flex items-center justify-center">
                                 <img src="https://live.staticflickr.com/65535/54948703093_d5bac81956.jpg" alt="Packaging Design" class="w-full h-full object-contain transition duration-500 group-hover:scale-105">
@@ -477,7 +444,6 @@
                             </div>
                         </div>
 
-                          <!-- Slide 3 -->
                           <div class="carousel-item flex-shrink-0 w-80 sm:w-96 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 border border-gray-200 group cursor-pointer">
                             <div class="overflow-hidden h-72 bg-gray-50 flex items-center justify-center">
                                 <img src="https://live.staticflickr.com/65535/54927093071_7807833714_z.jpg" alt="Neck Gaiter" class="w-full h-full object-contain transition duration-500 group-hover:scale-105">
@@ -488,7 +454,6 @@
                             </div>
                         </div>
 
-                        <!-- Slide 4 -->
                         <div class="carousel-item flex-shrink-0 w-80 sm:w-96 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 border border-gray-200 group cursor-pointer">
                             <div class="overflow-hidden h-72 bg-gray-50 flex items-center justify-center">
                                 <img src="https://live.staticflickr.com/65535/54903987754_357605665d_z.jpg" alt="YouTube Thumbnail" class="w-full h-full object-contain transition duration-500 group-hover:scale-105">
@@ -499,7 +464,6 @@
                             </div>
                         </div>
 
-                        <!-- Slide 5 -->
                         <div class="carousel-item flex-shrink-0 w-80 sm:w-96 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 border border-gray-200 group cursor-pointer">
                             <div class="overflow-hidden h-72 bg-gray-50 flex items-center justify-center">
                                 <img src="https://live.staticflickr.com/65535/54927396145_2e8f27b837_z.jpg" alt="Shirt Mockup" class="w-full h-full object-contain transition duration-500 group-hover:scale-105">
@@ -512,14 +476,11 @@
 
                     </div>
                 </div>
-                <!-- === END CAROUSEL === -->
-
                 <div id="full-gallery" class="text-center mb-12 reveal scroll-mt-24">
                     <h4 class="text-4xl font-extrabold text-dark-charcoal">Full Portfolio Gallery</h4>
                     <p class="text-rose-soft mt-2">Explore my work categorized by service type</p>
                 </div>
 
-                <!-- CATEGORY 1: SOCIAL MEDIA & BRANDING -->
                 <div class="mb-20 reveal">
                     <h3 class="text-2xl font-bold text-accent mb-6 border-l-4 border-accent pl-4">Social Media & Brand Identity</h3>
                     <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -574,7 +535,6 @@
                             </div>
                         </div>
 
-                        <!-- BRAND LOGO -->
                         <div class="portfolio-item relative overflow-hidden rounded-xl shadow-lg border border-gray-200 group cursor-pointer">
                             <img src="https://live.staticflickr.com/65535/54947734832_7171208f1f.jpg" alt="Brand Logo Design" class="portfolio-image w-full h-auto object-cover">
                             <div class="portfolio-overlay absolute inset-0 bg-black bg-opacity-50 flex items-end p-6">
@@ -585,7 +545,6 @@
                             </div>
                         </div>
 
-                        <!-- NEW ITEM ADDED HERE: FLYERS -->
                         <div class="portfolio-item relative overflow-hidden rounded-xl shadow-lg border border-gray-200 group cursor-pointer">
                             <img src="https://live.staticflickr.com/65535/54949387571_9d38edd0aa.jpg" alt="Flyers Design" class="portfolio-image w-full aspect-[626/640] object-cover">
                             <div class="portfolio-overlay absolute inset-0 bg-black bg-opacity-50 flex items-end p-6">
@@ -596,7 +555,6 @@
                             </div>
                         </div>
 
-                        <!-- NEW ITEM ADDED HERE: FLYER 2 -->
                         <div class="portfolio-item relative overflow-hidden rounded-xl shadow-lg border border-gray-200 group cursor-pointer">
                             <img src="https://live.staticflickr.com/65535/54949695935_d6ba867178_z.jpg" alt="Promotional Flyer Design" class="portfolio-image w-full aspect-[626/640] object-cover">
                             <div class="portfolio-overlay absolute inset-0 bg-black bg-opacity-50 flex items-end p-6">
@@ -610,10 +568,8 @@
                     </div>
                 </div>
 
-                <!-- CATEGORY 2: PACKAGING & PRODUCT DESIGN (RESTORED) -->
                 <div class="mb-20 reveal">
                     <h3 class="text-2xl font-bold text-accent mb-6 border-l-4 border-accent pl-4">Packaging & Product Design</h3>
-                    <!-- MASONRY GRID -->
                     <div class="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
                         
                         <div class="portfolio-item relative overflow-hidden rounded-xl shadow-lg border border-gray-200 group cursor-pointer break-inside-avoid">
@@ -689,7 +645,6 @@
                     </div>
                 </div>
 
-                <!-- CATEGORY 3: VIDEO MARKETING (RESTORED) -->
                 <div class="mb-16 reveal">
                     <h3 class="text-2xl font-bold text-accent mb-6 border-l-4 border-accent pl-4">YouTube & Video Marketing</h3>
                     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -727,37 +682,29 @@
                     </div>
                 </div>
 
-                <!-- MOVED CONTACT SECTION: Horizontal & Animated (Centered) -->
-                <!-- Reduced margin-bottom from mb-8 to mb-0 to minimize space -->
                 <div class="mt-20 mb-0 reveal">
                     <h4 class="text-accent font-bold text-xl mb-6 flex items-center justify-center gap-2">
                         <span class="w-2 h-2 bg-accent rounded-full animate-pulse"></span>
                         Need to connect right away?
                     </h4>
-                    <!-- Horizontal Container centered -->
                     <div class="flex flex-wrap justify-center gap-4">
                         
-                        <!-- LinkedIn Pill -->
                         <a href="https://www.linkedin.com/in/maria-cristina-garcia-371486388/" target="_blank" class="contact-anim flex items-center gap-2 px-5 py-3 bg-white border border-gray-200 rounded-full shadow-sm hover:shadow-md hover:border-accent hover:-translate-y-1 transition-all duration-300 group" style="animation-delay: 100ms;">
                             <svg class="w-5 h-5 text-gray-400 group-hover:text-[#0077b5] transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                             <span class="text-base font-medium text-rose-soft group-hover:text-dark-charcoal">LinkedIn</span>
                         </a>
 
-                        <!-- Email Pill -->
                         <a href="mailto:mcristinagarcia.va@gmail.com" class="contact-anim flex items-center gap-2 px-5 py-3 bg-white border border-gray-200 rounded-full shadow-sm hover:shadow-md hover:border-accent hover:-translate-y-1 transition-all duration-300 group" style="animation-delay: 200ms;">
                                 <svg class="w-5 h-5 text-gray-400 group-hover:text-red-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                             <span class="text-base font-medium text-rose-soft group-hover:text-dark-charcoal">Email Me</span>
                         </a>
 
-                        <!-- Whatsapp Pill -->
                         <a href="https://wa.me/639165239895" target="_blank" class="contact-anim flex items-center gap-2 px-5 py-3 bg-white border border-gray-200 rounded-full shadow-sm hover:shadow-md hover:border-accent hover:-translate-y-1 transition-all duration-300 group" style="animation-delay: 300ms;">
                             <svg class="w-5 h-5 text-gray-400 group-hover:text-[#25D366] transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
                             <span class="text-base font-medium text-rose-soft group-hover:text-dark-charcoal">WhatsApp</span>
                         </a>
 
-                        <!-- Resume Button -->
-                        <!-- Changed text-white to text-dark-charcoal for better contrast on Blush Pink -->
-                        <a href="https://sites.google.com/view/mcristinagarcia/home" target="_blank" class="contact-anim flex items-center gap-2 px-5 py-3 bg-accent text-dark-charcoal rounded-full shadow-md hover:shadow-lg hover:bg-white hover:-translate-y-1 transition-all duration-300 group" style="animation-delay: 400ms;">
+                        <a href="https://mcristinagarcia.github.io/mcg-resume/" target="_blank" class="contact-anim flex items-center gap-2 px-5 py-3 bg-accent text-dark-charcoal rounded-full shadow-md hover:shadow-lg hover:bg-white hover:-translate-y-1 transition-all duration-300 group" style="animation-delay: 400ms;">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
                             <span class="text-base font-bold">Resume</span>
                         </a>
@@ -767,12 +714,10 @@
             </div>
         </section>
 
-        <!-- Added !pb-4 to portfolio section to minimize bottom padding -->
         <style>
             #portfolio-page { padding-bottom: 1rem !important; }
         </style>
         
-        <!-- Added !pt-4 to Tools section to minimize top padding -->
         <section id="tools" class="bg-page-light !pt-4">
             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <div class="mb-10 reveal">
@@ -800,9 +745,7 @@
     </main>
 
     <footer class="bg-dark-charcoal py-8 relative">
-        <!-- Scroll to top button -->
         <div class="absolute -top-6 left-1/2 transform -translate-x-1/2">
-            <!-- Changed text-white to text-dark-charcoal for better contrast on Blush Pink -->
             <a href="#" class="bg-accent text-dark-charcoal p-3 rounded-full shadow-lg hover:bg-white transition animate-bounce block">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
             </a>
